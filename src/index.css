@@ -148,4 +148,8 @@
       @apply opacity-100 translate-y-0;
     }
   }
+
+  .text-shadow-neon-blue {
+    text-shadow: 0 0 5px #60a5fa, 0 0 10px #60a5fa, 0 0 15px #60a5fa, 0 0 20px #60a5fa;
+  }
 }
