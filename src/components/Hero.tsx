@@ -1,38 +1,20 @@
-import heroImage from "@/assets/hero-architecture.jpg";
+import { Button } from "./ui/button";
 
-const Hero = () => {
+export function Hero() {
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroImage})` }}
-      />
-      
-      {/* Overlay */}
-      <div className="absolute inset-0 hero-overlay" />
-      
-      {/* Content */}
-      <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
-        <h1 className="text-6xl md:text-8xl lg:text-9xl font-light text-white text-architectural mb-8 reveal">
-          <span className="text-blue-400 text-shadow-neon-blue">JTC</span>
-          <br />
-          ARCHITECTURE
+    <section className="relative h-screen w-full bg-cover bg-center" style={{ backgroundImage: "url('/src/assets/hero-architecture.jpg')" }}>
+      <div className="absolute inset-0 bg-black opacity-60"></div>
+      <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-white px-4">
+        <h1 className="text-5xl font-bold md:text-7xl lg:text-8xl mb-4">
+          <span className="neon-blue-text">JTC</span>
         </h1>
-        <p className="text-xl md:text-2xl text-white/80 font-light tracking-wide max-w-2xl mx-auto reveal-delayed">
-          Creating spaces that inspire through thoughtful design and uncompromising quality
+        <p className="mb-8 max-w-2xl text-lg md:text-xl">
+          Crafting spaces that inspire and endure. We blend innovative design with sustainable practices to create architectural marvels.
         </p>
-      </div>
-      
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 reveal-delayed">
-        <div className="w-px h-16 bg-white/40" />
-        <div className="text-minimal text-white/60 mt-4 rotate-90 origin-center">
-          SCROLL
-        </div>
+        <Button size="lg" className="bg-white text-gray-900 hover:bg-gray-200">
+          Discover Our Work
+        </Button>
       </div>
     </section>
   );
-};
-
-export default Hero;
+}
